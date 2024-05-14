@@ -1,3 +1,3 @@
 # Reforged Public API Reference
 
-Official Javascript implementation of the Reforged Public API.
+Official Reforged Public API Documentation of the Reforged Public API

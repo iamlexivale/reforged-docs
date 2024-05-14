@@ -1,9 +1,9 @@
 const config = {
   project: {
-    link: 'https://github.com/Arknesia/reforged-api'
+    link: 'https://github.com/iamlexivale/reforged-docs'
   },
-  logo: <b>Reforged Public API</b>,
-  docsRepositoryBase: 'https://github.com/Arknesia/reforged-api'
+  logo: <b>Reforged Public API Reference</b>,
+  docsRepositoryBase: 'https://github.com/iamlexivale/reforged-docs'
 };
 
 export default config;

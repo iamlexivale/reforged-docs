@@ -12,8 +12,9 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: "Reforged API",
-  description: "Official Javascript implementation of the Reforged Public API",
+  title: "Reforged Public API Reference",
+  description:
+    "Official Reforged Public API Documentation of the Reforged Public API",
 };
 
 export default function RootLayout({ children }: Props) {
