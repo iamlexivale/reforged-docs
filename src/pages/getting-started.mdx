@@ -1,0 +1,55 @@
+# Getting Started
+
+As of right now, the Reforged API only provides a service to you, via the use of a GET request. Responses are available in JSON.
+
+## Schema
+
+The base url for the API is `https://api.reforged.world/`. All data is received via JSON.
+
+## Versioning
+
+We expose different versions of the API, though, some versions may be unavailable at the time you are reading this.
+
+| Version |  Status   |
+| :------ | :-------: |
+| 1       | Available |
+
+#### Request URI
+
+To access version 1 of the api, the base url will be:
+
+```bash
+https://api.reforged.world/v1/
+```
+
+Unless otherwise specified, unknown requests will return a status 404 error:
+
+```js
+{
+    "status": 404
+}
+```
+
+See [Response Codes](https://docs.reforged.world/response-codes) for more information on response and error codes.
+
+## Response Semantics
+
+Each response will have a generic field or set of fields pertaining to the request.
+
+#### Response Semantics
+
+```json
+{
+    // ...
+    "request": {
+        "timestamp": Number, "version": Number
+    }
+}
+```
+
+| Name      | Type   | Description           |
+| :-------- | :----- | :-------------------- |
+| timestamp | Number | Time request was made |
+| version   | Number | Current Version       |
+
+See [Response Codes](https://docs.reforged.world/response-codes) for more information on error codes and messages.
