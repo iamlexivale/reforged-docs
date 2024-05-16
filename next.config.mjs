@@ -6,6 +6,17 @@ const withNextra = nextra({
   themeConfig: "./theme.config.jsx",
 });
 
-const nextConfig = withNextra({});
+const nextConfig = withNextra({
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.discordapp.com",
+        port: "",
+        pathname: "/attachments/**",
+      },
+    ],
+  },
+});
 
 export default nextConfig;

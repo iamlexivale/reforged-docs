@@ -3,5 +3,10 @@
   "getting-started": "Getting Started",
   "changelog": "Changelog",
   "response-codes": "Response Codes",
-  "resources": "Resources"
+  "---": {
+    "type": "separator"
+  },
+  "player": "Player",
+  "guild": "Guild",
+  "leaderboard": "Leaderboard"
 }

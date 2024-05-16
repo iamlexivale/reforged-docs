@@ -1,26 +1,4 @@
-# Users Resource
-
-## List
-
-Returns a list of all profiles.
-
-```sh
-https://api.reforged.world/v1/profiles
-```
-
-### Response
-
-```json
-{
-    "profiles": [String],
-    "request": {
-        "timestamp": Number,
-        "version": Number
-    }
-}
-```
-
-## Statistics
+# Player Statistics Resource
 
 Profile information, such as: level, class, attributes, xp, and more.
 
@@ -28,39 +6,7 @@ Profile information, such as: level, class, attributes, xp, and more.
 https://api.reforged.world/v1/profile/:profile-uuid
 ```
 
-### Attributes Object
-
-| Field        | Type   | Description | Options |
-| ------------ | ------ | ----------- | ------- |
-| vitality     | Number | ?           |         |
-| strength     | Number | ?           |         |
-| dexterity    | Number | ?           |         |
-| intelligence | Number | ?           |         |
-| luck         | Number | ?           |         |
-
-### Professions Object
-
-| Field       | Type   | Description | Options       |
-| ----------- | ------ | ----------- | ------------- |
-| smithing    | Number | ?           | `exp`,`level` |
-| enchanting  | Number | ?           | `exp`,`level` |
-| woodcutting | Number | ?           | `exp`,`level` |
-| fishing     | Number | ?           | `exp`,`level` |
-| farming     | Number | ?           | `exp`,`level` |
-| alchemy     | Number | ?           | `exp`,`level` |
-| mining      | Number | ?           | `exp`,`level` |
-
-### Bound Skills Object
-
-| Field | Type   | Description                                  | Options |
-| ----- | ------ | -------------------------------------------- | ------- |
-| 1     | String | Return value of skill name binding in slot 1 |         |
-| 2     | String | Return value of skill name binding in slot 2 |         |
-| 3     | String | Return value of skill name binding in slot 3 |         |
-| 4     | String | Return value of skill name binding in slot 4 |         |
-| 5     | String | Return value of skill name binding in slot 5 |         |
-
-### Response
+## Response
 
 ```json
 {
@@ -122,3 +68,35 @@ https://api.reforged.world/v1/profile/:profile-uuid
     }
 }
 ```
+
+## Attributes Object
+
+| Field        | Type   | Description | Options |
+| ------------ | ------ | ----------- | ------- |
+| vitality     | Number | ?           |         |
+| strength     | Number | ?           |         |
+| dexterity    | Number | ?           |         |
+| intelligence | Number | ?           |         |
+| luck         | Number | ?           |         |
+
+## Professions Object
+
+| Field       | Type   | Description | Options       |
+| ----------- | ------ | ----------- | ------------- |
+| smithing    | Number | ?           | `exp`,`level` |
+| enchanting  | Number | ?           | `exp`,`level` |
+| woodcutting | Number | ?           | `exp`,`level` |
+| fishing     | Number | ?           | `exp`,`level` |
+| farming     | Number | ?           | `exp`,`level` |
+| alchemy     | Number | ?           | `exp`,`level` |
+| mining      | Number | ?           | `exp`,`level` |
+
+## Bound Skills Object
+
+| Field | Type   | Description                                  | Options |
+| ----- | ------ | -------------------------------------------- | ------- |
+| 1     | String | Return value of skill name binding in slot 1 |         |
+| 2     | String | Return value of skill name binding in slot 2 |         |
+| 3     | String | Return value of skill name binding in slot 3 |         |
+| 4     | String | Return value of skill name binding in slot 4 |         |
+| 5     | String | Return value of skill name binding in slot 5 |         |
