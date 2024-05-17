@@ -24,15 +24,13 @@ https://api.reforged.world/v1/
 
 Unless otherwise specified, unknown requests will return a status 404 error:
 
-```js
-{
-    "status": 404
-}
+```bash
+Cannot GET /v1/
 ```
 
 See [Response Codes](https://docs.reforged.world/response-codes) for more information on response and error codes.
 
-## Response Semantics
+## Response
 
 Each response will have a generic field or set of fields pertaining to the request.
 
@@ -42,14 +40,15 @@ Each response will have a generic field or set of fields pertaining to the reque
 {
     // ...
     "request": {
-        "timestamp": Number, "version": Number
+        "timestamp": Date,
+        "version": Number
     }
 }
 ```
 
 | Name      | Type   | Description           |
 | :-------- | :----- | :-------------------- |
-| timestamp | Number | Time request was made |
-| version   | Number | Current Version       |
+| timestamp | Date   | Time request was made |
+| version   | Number | Current version       |
 
 See [Response Codes](https://docs.reforged.world/response-codes) for more information on error codes and messages.

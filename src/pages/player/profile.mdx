@@ -1,19 +1,55 @@
 # Player Profile Resource
 
-Returns a list of all profiles.
+Returns a details of profile based on username.
 
 ```sh
-https://api.reforged.world/v1/profiles
+https://api.reforged.world/v1/player/{username}/{profile}
 ```
 
 ## Response
 
 ```json
 {
-    "profiles": [String],
+    "player": {
+        "username": String,
+        "uuid": String,
+        "profile": {
+            "00000000-0000-0000-0000-000000000000": {
+                "name": String,
+                "class": String,
+                "attributes": {
+                    "dexterity": Number,
+                    "luck": Number,
+                    "strength": Number,
+                    "vitality": Number,
+                    "intelligence": Number
+                },
+                "professions": {
+                    "smithing": { "exp": Number, "level": Number },
+                    "enchanting": { "exp": Number, "level": Number },
+                    "woodcutting": { "exp": Number, "level": Number },
+                    "fishing": { "exp": Number, "level": Number },
+                    "farming": { "exp": Number, "level": Number },
+                    "alchemy": { "exp": Number, "level": Number },
+                    "mining": { "exp": Number, "level": Number },
+                    "smelting": { "exp": Number, "level": Number },
+                }
+            }
+        }
+    },
     "request": {
-        "timestamp": Number,
+        "timestamp": Date,
         "version": Number
     }
 }
 ```
+
+## Profiles Object
+
+| Field                                | Type   | Description               | Options                                                                              |
+| ------------------------------------ | ------ | ------------------------- | ------------------------------------------------------------------------------------ |
+| 00000000-0000-0000-0000-000000000000 | String | Return uuid profile       |                                                                                      |
+| name                                 | String | Return profile names      |                                                                                      |
+| class                                | String | Return class names        |                                                                                      |
+| attributes                           | Object | Return attributes player  | `dexterity`, `luck`, `strength`, `vitality`, `intelligence`                          |
+| professions                          | Object | Return professions player | `smithing`, `enchanting`, `woodcutting`, `fishing`, `farming`, `alchemy`, `smelting` |

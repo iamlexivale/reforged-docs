@@ -1,19 +1,37 @@
 # Player List Resource
 
-Returns a list of all profiles.
+Returns a list of all players.
 
 ```sh
-https://api.reforged.world/v1/profiles
+https://api.reforged.world/v1/players
 ```
 
 ## Response
 
 ```json
 {
-    "profiles": [String],
+    "players": [
+        {
+            "username": String,
+            "uuid": String,
+            "profiles": {
+                "00000000-0000-0000-0000-000000000000": {
+                    "name": String
+                }
+            }
+        },
+        // and many more
+    ],
     "request": {
-        "timestamp": Number,
+        "timestamp": Date,
         "version": Number
     }
 }
 ```
+
+## Profiles Object
+
+| Field                                | Type   | Description          | Options |
+| ------------------------------------ | ------ | -------------------- | ------- |
+| 00000000-0000-0000-0000-000000000000 | String | Return uuid profile  |         |
+| name                                 | String | Return profile names |         |
