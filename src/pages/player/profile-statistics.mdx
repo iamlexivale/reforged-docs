@@ -1,0 +1,118 @@
+# Profile Statistics Resource
+
+Returns a details of profile based on username.
+
+```sh
+/v1/player/{username}/{profile}
+```
+
+## Response
+
+```json
+{
+    "player": {
+        "username": String,
+        "uuid": String,
+        "profile": {
+            "00000000-0000-0000-0000-000000000000": {
+                "name": String,
+                "class": String,
+                "attributes": {
+                    "dexterity": Number,
+                    "luck": Number,
+                    "strength": Number,
+                    "vitality": Number,
+                    "intelligence": Number
+                },
+                "professions": {
+                    "smithing": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "enchanting": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "woodcutting": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "fishing": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "farming": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "alchemy": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "mining": {
+                        "exp": Number,
+                        "level": Number
+                    },
+                    "smelting": {
+                        "exp": Number,
+                        "level": Number
+                    }
+                }
+            }
+        }
+    },
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+### `profiles` object
+
+| Field                                | Type   | Description         | Options |
+| ------------------------------------ | ------ | ------------------- | ------- |
+| 00000000-0000-0000-0000-000000000000 | String | Return profile uuid |         |
+
+### `uuid` object
+
+| Field       | Type   | Description              | Options                                                                                        |
+| ----------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------- |
+| name        | String | Return profile names     |                                                                                                |
+| class       | String | Return class names       |                                                                                                |
+| attributes  | Object | Return attributes stats  | `dexterity`, `luck`, `strength`, `vitality`, `intelligence`                                    |
+| professions | Object | Return professions stats | `smithing`, `enchanting`, `woodcutting`, `fishing`, `farming`, `alchemy`, `mining`, `smelting` |
+
+### `attributes` object
+
+| Field        | Type   | Description               | Options |
+| ------------ | ------ | ------------------------- | ------- |
+| dexterity    | Number | Return dexterity stats    |         |
+| luck         | Number | Return luck stats         |         |
+| strength     | Number | Return strength stats     |         |
+| vitality     | Number | Return vitality stats     |         |
+| intelligence | Number | Return intelligence stats |         |
+
+### `professions` object
+
+| Field       | Type   | Description                          | Options        |
+| ----------- | ------ | ------------------------------------ | -------------- |
+| smithing    | Object | Return professions smithing stats    | `exp`, `level` |
+| enchanting  | Object | Return professions enchanting stats  | `exp`, `level` |
+| woodcutting | Object | Return professions woodcutting stats | `exp`, `level` |
+| fishing     | Object | Return professions fishing stats     | `exp`, `level` |
+| farming     | Object | Return professions farming stats     | `exp`, `level` |
+| alchemy     | Object | Return professions alchemy stats     | `exp`, `level` |
+| mining      | Object | Return professions mining stats      | `exp`, `level` |
+| smelting    | Object | Return professions smelting stats    | `exp`, `level` |
+
+### `%professions%` object
+
+| Field | Type   | Description        | Options |
+| ----- | ------ | ------------------ | ------- |
+| exp   | Number | Return exp value   |         |
+| level | Number | Return level value |         |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

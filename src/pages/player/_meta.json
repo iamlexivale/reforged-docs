@@ -1,5 +1,5 @@
 {
-  "list": "List",
-  "statistics": "Statistics",
-  "profile": "Profile"
+  "player-list": "Player List",
+  "player-profile": "Player Profile",
+  "profile-statistics": "Profile Statistics"
 }

@@ -1,9 +1,20 @@
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 
 const config = {
   project: {
     link: 'https://github.com/iamlexivale/reforged-docs'
   },
+  docsRepositoryBase: 'https://github.com/iamlexivale/reforged-docs/blob/main',
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Reforged Public API Reference'
+      }
+    }
+  },
+  darkMode: false,
   logo: (
     <>
       <Image
@@ -13,9 +24,18 @@ const config = {
       <b style={{ marginLeft: '.4em' }}>Reforged Public API Reference</b>
     </>
   ),
-  docsRepositoryBase: 'https://github.com/iamlexivale/reforged-docs',
-  footer: '',
-  darkMode: false
+  chat: {
+    link: 'https://discord.gg/jnYcwCR2UE',
+  },
+  banner: {
+    key: 'v1-release',
+    text: (
+      <a href="https://www.reforged.world/" target="_blank">
+        🎉 Reforged Public API v1 is released. Read more →
+      </a>
+    )
+  },
+  footer: ''
 };
 
 export default config;

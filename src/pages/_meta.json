@@ -8,5 +8,17 @@
   },
   "player": "Player",
   "guild": "Guild",
-  "leaderboard": "Leaderboard"
+  "leaderboard": "Leaderboard",
+  "website": {
+    "title": "Reforge World",
+    "type": "page",
+    "href": "https://www.reforged.world",
+    "newWindow": true
+  },
+  "wiki": {
+    "title": "Reforge Wiki",
+    "type": "page",
+    "href": "https://wiki.reforged.world",
+    "newWindow": true
+  }
 }
