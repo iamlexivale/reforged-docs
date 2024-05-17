@@ -22,10 +22,12 @@ To access version 1 of the api, the base url will be:
 https://api.reforged.world/v1/
 ```
 
-Unless otherwise specified, unknown requests will return a status 404 error:
+Unless otherwise specified, unknown requests will return a status 404 with error:
 
 ```bash
-Cannot GET /v1/
+{
+    "error": "Route not found"
+}
 ```
 
 See [Response Codes](https://docs.reforged.world/response-codes) for more information on response and error codes.

@@ -3,7 +3,7 @@
 Player information, such as: level, class, attributes, xp, and more.
 
 ```sh
-https://api.reforged.world/v1/player/{username}
+/v1/player/{username}
 ```
 
 ## Response
@@ -35,7 +35,7 @@ https://api.reforged.world/v1/player/{username}
                     "smelting": { "exp": Number, "level": Number }
                 }
             },
-            // and many more
+            // ...
         }
     },
     "request": {
@@ -45,7 +45,7 @@ https://api.reforged.world/v1/player/{username}
 }
 ```
 
-## Profiles Object
+### Profiles Object
 
 | Field                                | Type   | Description               | Options                                                                              |
 | ------------------------------------ | ------ | ------------------------- | ------------------------------------------------------------------------------------ |
@@ -54,3 +54,7 @@ https://api.reforged.world/v1/player/{username}
 | class                                | String | Return class names        |                                                                                      |
 | attributes                           | Object | Return attributes player  | `dexterity`, `luck`, `strength`, `vitality`, `intelligence`                          |
 | professions                          | Object | Return professions player | `smithing`, `enchanting`, `woodcutting`, `fishing`, `farming`, `alchemy`, `smelting` |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

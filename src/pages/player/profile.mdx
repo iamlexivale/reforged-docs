@@ -3,7 +3,7 @@
 Returns a details of profile based on username.
 
 ```sh
-https://api.reforged.world/v1/player/{username}/{profile}
+/v1/player/{username}/{profile}
 ```
 
 ## Response
@@ -44,7 +44,7 @@ https://api.reforged.world/v1/player/{username}/{profile}
 }
 ```
 
-## Profiles Object
+### Profiles Object
 
 | Field                                | Type   | Description               | Options                                                                              |
 | ------------------------------------ | ------ | ------------------------- | ------------------------------------------------------------------------------------ |
@@ -53,3 +53,7 @@ https://api.reforged.world/v1/player/{username}/{profile}
 | class                                | String | Return class names        |                                                                                      |
 | attributes                           | Object | Return attributes player  | `dexterity`, `luck`, `strength`, `vitality`, `intelligence`                          |
 | professions                          | Object | Return professions player | `smithing`, `enchanting`, `woodcutting`, `fishing`, `farming`, `alchemy`, `smelting` |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

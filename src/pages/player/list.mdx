@@ -3,7 +3,7 @@
 Returns a list of all players.
 
 ```sh
-https://api.reforged.world/v1/players
+/v1/players
 ```
 
 ## Response
@@ -20,7 +20,7 @@ https://api.reforged.world/v1/players
                 }
             }
         },
-        // and many more
+        // ...
     ],
     "request": {
         "timestamp": Date,
@@ -29,9 +29,13 @@ https://api.reforged.world/v1/players
 }
 ```
 
-## Profiles Object
+### Profiles Object
 
 | Field                                | Type   | Description          | Options |
 | ------------------------------------ | ------ | -------------------- | ------- |
 | 00000000-0000-0000-0000-000000000000 | String | Return uuid profile  |         |
 | name                                 | String | Return profile names |         |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.
