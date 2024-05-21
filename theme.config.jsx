@@ -10,7 +10,7 @@ const config = {
     const { asPath } = useRouter()
     if (asPath !== '/') {
       return {
-        titleTemplate: '%s – Reforged Public API Reference'
+        titleTemplate: '%s – Reforged Docs'
       }
     }
   },
