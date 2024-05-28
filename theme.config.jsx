@@ -26,14 +26,14 @@ const config = {
   chat: {
     link: 'https://discord.gg/jnYcwCR2UE',
   },
-  banner: {
-    key: 'v1-release',
-    text: (
-      <a href="https://www.reforged.world/" target="_blank">
-        🎉 Reforged Public API v1 is released. Read more →
-      </a>
-    )
-  },
+  // banner: {
+  //   key: 'v1-release',
+  //   text: (
+  //     <a href="https://www.reforged.world/" target="_blank">
+  //       🎉 Reforged Public API v1 is released. Read more →
+  //     </a>
+  //   )
+  // },
   footer: ''
 };
 

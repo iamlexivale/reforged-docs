@@ -14,11 +14,7 @@ Returns a list of all players.
         {
             "username": String,
             "uuid": String,
-            "profiles": {
-                "00000000-0000-0000-0000-000000000000": {
-                    "name": String
-                }
-            }
+            "lastlogin": Number
         },
         // ...
     ],
@@ -29,17 +25,13 @@ Returns a list of all players.
 }
 ```
 
-### `profiles` object
+### `players` object
 
-| Field                                | Type   | Description         | Options |
-| ------------------------------------ | ------ | ------------------- | ------- |
-| 00000000-0000-0000-0000-000000000000 | String | Return profile uuid |         |
-
-### `uuid` object
-
-| Field | Type   | Description          | Options |
-| ----- | ------ | -------------------- | ------- |
-| name  | String | Return profile names |         |
+| Field     | Type   | Description                | Options                         |
+| --------- | ------ | -------------------------- | ------------------------------- |
+| username  | String | return player username     |                                 |
+| uuid      | String | return player uuid         |                                 |
+| lastlogin | Number | return player latest login | _can be convert to date format_ |
 
 ## Rate Limit
 
