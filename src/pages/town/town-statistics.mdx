@@ -1,0 +1,79 @@
+# Town Statistics Resource
+
+Returns all data town information based on town name.
+
+```sh
+/v1/town/{name}
+```
+
+## Response
+
+```json
+{
+    "town": {
+        "name": String,
+        "mayor": String,
+        "nation": String,
+        "townBoard": String,
+        "tag": String,
+        "founder": String,
+        "protectionStatus": String,
+        "bonus": Number,
+        "purchased": Number,
+        "taxpercent": Boolean,
+        "maxPercentTaxAmount": Number,
+        "taxes": Number,
+        "hasUpkeep": Boolean,
+        "plotPrice": Number,
+        "plotTax": Number,
+        "commercialPlotPrice": Number,
+        "commercialPlotTax": Number,
+        "embassyPlotPrice": Number,
+        "embassyPlotTax": Number,
+        "open": Boolean,
+        "public": Boolean,
+        "adminEnabledMobs": Boolean,
+        "admindisabledpvp": Boolean,
+        "adminenabledpvp": Boolean,
+        "allowedToWar": Boolean,
+        "homeblock": String,
+        "spawn": String,
+        "outpostSpawns": String,
+        "outlaws": String,
+        "uuid": String,
+        "registered": String,
+        "spawnCost": Number,
+        "mapColorHexCode": String,
+        "metadata": String,
+        "conqueredDays": Number,
+        "conquered": Boolean,
+        "ruined": Boolean,
+        "ruinedTime": String,
+        "neutral": Boolean,
+        "debtBalance": Number,
+        "joinedNationAt": String,
+        "primaryJail": String,
+        "movedHomeBlockAt": String,
+        "trustedResidents": String,
+        "trustedTowns": String,
+        "nationZoneOverride": Number,
+        "nationZoneEnabled": Boolean,
+        "allies": String,
+        "enemies": String,
+        "hasUnlimitedClaims": Boolean,
+        "manualTownLevel": String,
+        "forSale": Boolean,
+        "forSalePrice": Number,
+        "visibleOnTopLists": Boolean,
+        "jailSpawns": String
+    },
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

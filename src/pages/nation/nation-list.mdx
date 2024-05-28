@@ -1,0 +1,38 @@
+# Nation List Resource
+
+Returns a list of all nations.
+
+```sh
+/v1/nations
+```
+
+## Response
+
+```json
+{
+    "nations": [
+        {
+            "name": String,
+            "capital": String,
+            "registered": String
+        },
+        // ...
+    ],
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+### `nations` object
+
+| Field      | Type   | Description               | Options |
+| ---------- | ------ | ------------------------- | ------- |
+| name       | String | Return name of nation     |         |
+| capital    | String | Return capital of mayor   |         |
+| registered | String | Return date of registered |         |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

@@ -1,18 +1,18 @@
-# Leaderboard Player Resource
+# Leaderboard Nation Resource
 
-Returns a list of top 10 players based on coins.
+Returns a list of top 10 nations based on coins.
 
 ```sh
-/v1/leaderboard/players
+/v1/leaderboard/nations
 ```
 
 ## Response
 
 ```json
 {
-    "players": [
+    "nations": [
         {
-            "player": String,
+            "nation": String,
             "coins": Number
         },
         // ...
@@ -24,12 +24,12 @@ Returns a list of top 10 players based on coins.
 }
 ```
 
-### `players` object
+### `nations` object
 
 | Field  | Type   | Description         | Options |
 | ------ | ------ | ------------------- | ------- |
-| player | String | Return player name  |         |
-| coins  | Number | Return player coins |         |
+| nation | String | Return nation name  |         |
+| coins  | Number | Return nation coins |         |
 
 ## Rate Limit
 

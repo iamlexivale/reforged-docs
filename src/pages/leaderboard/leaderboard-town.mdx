@@ -1,0 +1,36 @@
+# Leaderboard Town Resource
+
+Returns a list of top 10 towns based on coins.
+
+```sh
+/v1/leaderboard/towns
+```
+
+## Response
+
+```json
+{
+    "towns": [
+        {
+            "town": String,
+            "coins": Number
+        },
+        // ...
+    ],
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+### `towns` object
+
+| Field | Type   | Description       | Options |
+| ----- | ------ | ----------------- | ------- |
+| town  | String | Return town name  |         |
+| coins | Number | Return town coins |         |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

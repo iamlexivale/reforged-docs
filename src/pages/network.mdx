@@ -1,0 +1,26 @@
+# Network Resource
+
+Returns the player sum on and player registered.
+
+```sh
+/v1/network
+```
+
+## Response
+
+```json
+{
+    "network": {
+        "players_online": Number,
+        "players_registered": Number
+    },
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

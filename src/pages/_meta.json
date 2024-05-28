@@ -6,8 +6,10 @@
   "---": {
     "type": "separator"
   },
+  "network": "Network",
   "player": "Player",
-  "guild": "Guild",
+  "town": "Town",
+  "nation": "Nation",
   "leaderboard": "Leaderboard",
   "world": {
     "title": "Reforged World",

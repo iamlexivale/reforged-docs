@@ -1,0 +1,38 @@
+# Town List Resource
+
+Returns a list of all towns.
+
+```sh
+/v1/towns
+```
+
+## Response
+
+```json
+{
+    "towns": [
+        {
+            "name": String,
+            "mayor": String,
+            "nation": String
+        },
+        // ...
+    ],
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+### `towns` object
+
+| Field  | Type   | Description           | Options |
+| ------ | ------ | --------------------- | ------- |
+| name   | String | Return name of town   |         |
+| mayor  | String | Return name of mayor  |         |
+| nation | String | Return name of nation |         |
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.

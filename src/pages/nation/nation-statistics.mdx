@@ -1,0 +1,44 @@
+# Nation Statistics Resource
+
+Returns all data nation information based on town name.
+
+```sh
+/v1/nation/{name}
+```
+
+## Response
+
+```json
+{
+    "nation": {
+        "name": String,
+        "capital": String,
+        "tag": String,
+        "allies": String,
+        "enemies": String,
+        "taxes": Number,
+        "taxpercent": Boolean,
+        "maxPercentTaxAmount": Number,
+        "spawnCost": Number,
+        "neutral": Boolean,
+        "uuid": String,
+        "registered": String,
+        "nationBoard": String,
+        "mapColorHexCode": String,
+        "nationSpawn": String,
+        "isPublic": Boolean,
+        "isOpen": Boolean,
+        "metadata": String,
+        "conqueredTax": Number,
+        "sanctionedTowns": String
+    },
+    "request": {
+        "timestamp": Date,
+        "version": Number
+    }
+}
+```
+
+## Rate Limit
+
+The rate limit for the player statistics is 750 requests per 30 minutes per IP.
