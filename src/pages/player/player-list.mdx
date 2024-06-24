@@ -12,9 +12,9 @@ Returns a list of all players.
 {
     "players": [
         {
-            "username": String,
             "uuid": String,
-            "lastlogin": Number
+            "username": String,
+            "primary_group": String
         },
         // ...
     ],
@@ -27,11 +27,11 @@ Returns a list of all players.
 
 ### `players` object
 
-| Field     | Type   | Description                | Options                         |
-| --------- | ------ | -------------------------- | ------------------------------- |
-| username  | String | return player username     |                                 |
-| uuid      | String | return player uuid         |                                 |
-| lastlogin | Number | return player latest login | _can be convert to date format_ |
+| Field         | Type   | Description            | Options |
+| ------------- | ------ | ---------------------- | ------- |
+| uuid          | String | return player uuid     |         |
+| username      | String | return player username |         |
+| primary_group | String | return player rank     |         |
 
 ## Rate Limit
 
